@@ -1,0 +1,59 @@
+
+
+<%- include("Header") -%>
+
+
+<h2 class="srhead">All customers</h2>
+
+<table style="width: 500px;">
+  <tr>
+    <th>Sender</th>
+    <th>Balance</th>
+    <th>Email</th>
+    <th>View customers</th>
+  </tr>
+</table>
+<% customers.forEach((item, i) => {  %>
+
+
+  <table style="width:500px">
+    <tr>
+      <td> <%= item.username  %></td>
+      <td><%= item.balance%></td>
+      <td> <%= item.emailid%></td>
+      <td>  <a href="">Select And view</a></td>
+      
+    </tr>
+  </table>
+<!-- <div class="containermine">
+  <div class="showrec">
+    <ul>
+      <li> User Name: <%= item.username  %> </li>
+        <li> Current Balance: <%= item.balance%> Rupees</li>
+        <li>Email: <%= item.emailid%></li>
+    </ul>
+  </div> -->
+<%   });  %>
+
+
+
+  <a href="/">Go To Homepage</a>
+<section >
+  <br>
+  <br>
+  <br>
+  <h3>Make a Transaction</h3>
+  <form action="/transaction" method="post" onSubmit="return confirm('Do you want to submit?') ">
+    <input type="text" name="sender" id="" placeholder="Name of Sender" required>
+    <input type="text" name="reciever" id="" placeholder="Name of Reciever" required>
+    <input type="number" placeholder="Enter Amount" name='amount' required>
+    <button type="submit" style="background-color:dodgerblue;">Make Payment</button>
+  </form>
+  <a href="/transfermoney">Transaction History</a>
+</section>
+<br>
+<br>
+<br>
+</div>
+<%- include("Footer") -%>
+

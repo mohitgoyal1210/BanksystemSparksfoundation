@@ -1,0 +1,48 @@
+
+
+<%- include("Header") -%>
+
+
+<h2 class="srhead">All customers</h2>
+
+<table style="width:250px">
+  <tr>
+    <th>Sender</th>
+    <th>Reciver</th>
+    <th>Amount</th>
+  </tr>
+</table>
+<% transfer.forEach((item, i) => {  %>
+
+<!-- <div class="containermine">
+  <div class="showrec">
+
+    <ul>
+
+      <li> Sender: <%= item.senderp  %> </li>
+      
+        <li> Reciver: <%= item.reciverp%> Rupees</li>
+        <li> Amount: <%= item.amount%> Rupees</li>
+    </ul>
+
+
+  </div> -->
+  <table style="width:250px">
+    <tr>
+      <td> <%= item.senderp  %></td>
+      <td><%= item.reciverp%></td>
+      <td> <%= item.amount%></td>
+      
+    </tr>
+  </table>
+
+
+<%   });  %>
+
+
+
+  <a href="/">Go To Homepage</a>
+<section >
+ 
+<%- include("Footer") -%>
+
